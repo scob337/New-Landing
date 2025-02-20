@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className=" px-5 py-2 h-30 flex items-center relative z-20 overflow-hidden">
       <article className="flex justify-between items-center w-full absolute top-0 left-0  ">
-        <div className="w-30 flex justify-center items-center cursor-pointer">
+        <div className="w-30 flex justify-center items-center cursor-pointer logo">
           <img src={Logo} alt="Site Logo" />
         </div>
         <article

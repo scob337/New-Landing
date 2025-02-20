@@ -1,21 +1,37 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
-// Custom Hook to detect scroll direction
+// Custom Hook to detect scroll direction (global scroll)
 const useScrollDirection = (delay = 200) => {
   const [scrollDirection, setScrollDirection] = useState(null);
-  let lastScrollY = typeof window !== "undefined" ? window.scrollY : 0;
+  const lastScrollY = useRef(0);
+  const timeoutId = useRef(null);
+  const ticking = useRef(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY) {
-        setScrollDirection("down");
-      } else if (currentScrollY < lastScrollY) {
-        setScrollDirection("up");
-      }
-      lastScrollY = currentScrollY;
+    const getScrollY = () => {
+      // استخدام document.documentElement لتتبع الاسكرول على مستوى الصفحة
+      return document.documentElement.scrollTop || window.pageYOffset;
+    };
 
-      setTimeout(() => {
+    const handleScroll = () => {
+      const currentScrollY = getScrollY();
+
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          if (currentScrollY > lastScrollY.current) {
+            setScrollDirection("down");
+          } else if (currentScrollY < lastScrollY.current) {
+            setScrollDirection("up");
+          }
+          lastScrollY.current = currentScrollY;
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
+
+      // إعادة التعيين إلى null بعد فترة
+      if (timeoutId.current) clearTimeout(timeoutId.current);
+      timeoutId.current = setTimeout(() => {
         setScrollDirection(null);
       }, delay);
     };
@@ -24,6 +40,7 @@ const useScrollDirection = (delay = 200) => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      if (timeoutId.current) clearTimeout(timeoutId.current);
     };
   }, [delay]);
 

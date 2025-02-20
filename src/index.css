@@ -1,48 +1,88 @@
 @import "tailwindcss";
 
+
+
+/* Header Bar Animation  */
+
 .Animation-Header {
     position: relative;
 }
 
-.Animation-Header::before {
-    content: attr(data-text);
-    text-align: center;
-    position: absolute;
-    top: 22px;
-    left: 0;
+.Animation-Header {
     width: 100%;
-    color: transparent;
-    -webkit-text-stroke: 2px white;
-    text-transform: uppercase;
+    color: #F2881F;
     transition: top 0.5s ease;
 }
 
+
+.Animation-Header::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transition: all 0.5s ease;
+    left: 0;
+    top: 25px;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-transform: uppercase;
+}
+
 .Animation-Header.scrolling-down::before {
-    top: 30px;
+    top: 40px !important;
 }
 
 .Animation-Header.scrolling-up::before {
-    top: 8px;
+    top: 0px !important;
 }
 
-@media (max-width: 846px) {
-    .Animation-Header::before {
-        font-size: 85px;
-    }
-}
 
-@media (max-width: 515px) {
+@media (max-width:580px) {
     .Animation-Header {
-        font-size: 64px;
+        font-size: 48px !important;
     }
 
     .Animation-Header::before {
-        font-size: 64px;
-        width: 73%;
-        left:2px;
-        text-align: center;
-        display: flex;
+        font-size: 48px !important;
     }
+}
+
+@media (min-width:728px) {
+    .Animation-Header {
+        font-size: 72px;
+    }
+
+    .Animation-Header::before {
+        font-size: 72px;
+    }
+}
+
+@media (min-width:992px) {
+    .Animation-Header {
+        font-size: 92px;
+    }
+
+    .Animation-Header::before {
+        font-size: 92px;
+    }
+}
+
+/* Header Bar Animation  */
+
+
+/* Cursor Before  & Icon*/
+
+body {
+    cursor: url('../src/assets/cursor-1.cur'),
+        auto;
+    background-color: #000;
+}
+
+a,
+button,
+.logo {
+    cursor: url('../src/assets/Cursor_5.ico'),
+        auto !important;
 }
 
 .custom-cursor {
@@ -68,10 +108,26 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-animation: pulse 1.5s infinite ease-in-out;
     animation: pulse 1.5s infinite ease-in-out;
     pointer-events: none;
-    /* تجنب تعارض التأثير مع التفاعل */
 }
+
+
+
+@-webkit-keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
 
 @keyframes pulse {
     0% {
@@ -84,3 +140,107 @@
         opacity: 0;
     }
 }
+
+/* Cursor Before  & Icon*/
+
+/* Buttons Effect Border  */
+
+.btn-Effect::before,
+.btn-Effect::after {
+    content: "";
+    position: absolute;
+    border: 1px solid #fff;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.btn-Effect::before {
+    transform: rotate(3deg)
+}
+
+.btn-Effect::after {
+    transform: rotate(-3deg)
+}
+
+/* Buttons Effect Border  */
+
+
+/* Scroll Bar Styles */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F2881F;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #D9761E;
+}
+
+/* Scroll Bar Styles */
+
+
+/* hero-pic */
+
+.hero-pic {
+    -webkit-animation: infinite 2s linear hero-pic;
+    animation: infinite 2s linear hero-pic;
+}
+
+
+@-webkit-keyframes hero-pic {
+    0% {
+        transform: translate(0, 0%);
+    }
+
+    25% {
+        transform: translate(0, -5%);
+    }
+
+    50% {
+        transform: translate(0, -10%);
+    }
+
+    75% {
+        transform: translate(0, -5%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+
+}
+
+
+@keyframes hero-pic {
+    0% {
+        transform: translate(0, 0%);
+    }
+
+    25% {
+        transform: translate(0, -5%);
+    }
+
+    50% {
+        transform: translate(0, -10%);
+    }
+
+    75% {
+        transform: translate(0, -5%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+
+}
+
+/* hero-pic */

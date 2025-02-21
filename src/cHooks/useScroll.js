@@ -9,7 +9,6 @@ const useScrollDirection = (delay = 200) => {
 
   useEffect(() => {
     const getScrollY = () => {
-      // استخدام document.documentElement لتتبع الاسكرول على مستوى الصفحة
       return document.documentElement.scrollTop || window.pageYOffset;
     };
 

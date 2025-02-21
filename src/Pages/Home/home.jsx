@@ -1,5 +1,5 @@
 import useScrollDirection from "../../cHooks/useScroll";
-import GroupSection from "../../Components/HomeComponents/GroupSection";
+import GroupSection from "../../Components/HomeComponents/GroupSection/GroupSection";
 import Button from "../../Components/SharedComponents/Button";
 import { FaArrowRight } from "react-icons/fa";
 

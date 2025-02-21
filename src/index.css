@@ -14,6 +14,11 @@
     transition: top 0.5s ease;
 }
 
+.transparent-text {
+    color: transparent !important;
+    -webkit-text-stroke: 1px #888C9D;
+    font-weight: bold;
+}
 
 .Animation-Header::before {
     content: attr(data-text);
@@ -24,8 +29,9 @@
     left: 0;
     top: 25px;
     color: transparent;
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 1px #eee;
     text-transform: uppercase;
+
 }
 
 .Animation-Header.scrolling-down::before {

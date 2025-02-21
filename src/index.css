@@ -1,17 +1,12 @@
 @import "tailwindcss";
 
-
-
-/* Header Bar Animation  */
-
+/* Header Bar Animation */
 .Animation-Header {
     position: relative;
-}
-
-.Animation-Header {
     width: 100%;
     color: #F2881F;
     transition: top 0.5s ease;
+    font-size: inherit;
 }
 
 .transparent-text {
@@ -31,13 +26,14 @@
     color: transparent;
     -webkit-text-stroke: 1px #eee;
     text-transform: uppercase;
-
+    font-size: inherit;
 }
 
 .Animation-Title h1 {
     position: absolute;
-    left: 40%;
+    left: 50%;
     top: 20px;
+    transform: translateX(-50%);
     transition: all .5s linear;
 }
 
@@ -51,53 +47,40 @@
     top: 0px !important;
 }
 
-
 @media (max-width:580px) {
-    .Animation-Header {
-        font-size: 48px !important;
-    }
 
+    .Animation-Header,
     .Animation-Header::before {
         font-size: 48px !important;
     }
 }
 
 @media (min-width:728px) {
-    .Animation-Header {
-        font-size: 72px;
-    }
 
+    .Animation-Header,
     .Animation-Header::before {
         font-size: 72px;
     }
 }
 
 @media (min-width:992px) {
-    .Animation-Header {
-        font-size: 92px;
-    }
 
+    .Animation-Header,
     .Animation-Header::before {
         font-size: 92px;
     }
 }
 
-/* Header Bar Animation  */
-
-
-/* Cursor Before  & Icon*/
-
+/* Cursor Customization */
 body {
-    cursor: url('../src/assets/cursor-1.cur'),
-        auto;
+    cursor: url('/cursor-1.cur'), auto;
     background-color: #16161B;
 }
 
 a,
 button,
 .logo {
-    cursor: url('../src/assets/Cursor_5.ico'),
-        auto !important;
+    cursor: url('/Cursor_5.ico'), auto !important;
 }
 
 .custom-cursor {
@@ -108,10 +91,9 @@ button,
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: transform 0.1s ease;
+    transition: transform 0.3s ease;
     z-index: 9999;
 }
-
 
 .custom-cursor::after {
     content: "";
@@ -128,8 +110,6 @@ button,
     pointer-events: none;
 }
 
-
-
 @-webkit-keyframes pulse {
     0% {
         transform: scale(0.5);
@@ -141,8 +121,6 @@ button,
         opacity: 0;
     }
 }
-
-
 
 @keyframes pulse {
     0% {
@@ -156,10 +134,7 @@ button,
     }
 }
 
-/* Cursor Before  & Icon*/
-
-/* Buttons Effect Border  */
-
+/* Buttons Effect Border */
 .btn-Effect::before,
 .btn-Effect::after {
     content: "";
@@ -169,19 +144,16 @@ button,
     top: 0px;
     width: 100%;
     height: 100%;
-    z-index: 10;
+    z-index: 1;
 }
 
 .btn-Effect::before {
-    transform: rotate(3deg)
+    transform: rotate(3deg);
 }
 
 .btn-Effect::after {
-    transform: rotate(-3deg)
+    transform: rotate(-3deg);
 }
-
-/* Buttons Effect Border  */
-
 
 /* Scroll Bar Styles */
 ::-webkit-scrollbar {
@@ -200,16 +172,11 @@ button,
     background: #D9761E;
 }
 
-/* Scroll Bar Styles */
-
-
-/* hero-pic */
-
+/* Hero Image Animation */
 .hero-pic {
-    -webkit-animation: infinite 2s linear hero-pic;
-    animation: infinite 2s linear hero-pic;
+    -webkit-animation: hero-pic 2s linear infinite;
+    animation: hero-pic 2s linear infinite;
 }
-
 
 @-webkit-keyframes hero-pic {
     0% {
@@ -231,9 +198,7 @@ button,
     100% {
         transform: translate(0, 0);
     }
-
 }
-
 
 @keyframes hero-pic {
     0% {
@@ -255,13 +220,9 @@ button,
     100% {
         transform: translate(0, 0);
     }
-
 }
 
-/* hero-pic */
-
-
-
+/* Underline Effect */
 span.underlines {
     z-index: 3 !important;
     position: relative;

@@ -47,42 +47,88 @@
     top: 0px !important;
 }
 
-@media (max-width:580px) {
+@media (max-width:419px) {
 
     .Animation-Header,
     .Animation-Header::before {
-        font-size: 48px !important;
+        font-size: 42px !important;
     }
 }
 
-@media (min-width:728px) {
+@media (min-width:420px) and (max-width:449px) {
 
     .Animation-Header,
     .Animation-Header::before {
-        font-size: 72px;
+        font-size: 45px;
+        width: 100%;
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:449px) {
+
+    .Animation-Header,
+    .Animation-Header::before {
+        font-size: 60px;
+    }
+}
+
+@media (min-width:450px) and (max-width:599px) {
+
+    .Animation-Header,
+    .Animation-Header::before {
+        font-size: 64px;
+    }
+}
+
+@media (min-width:600px) and (max-width:799px) {
+
+    .Animation-Header,
+    .Animation-Header::before {
+        font-size: 80px;
+    }
+}
+
+@media (min-width:800px) and (max-width:919px) {
 
     .Animation-Header,
     .Animation-Header::before {
         font-size: 92px;
+    }
+}
+
+@media (min-width:920px) and (max-width:1090px) {
+
+    .Animation-Header,
+    .Animation-Header::before {
+        font-size: 88px;
+        width: 85%;
+        left: 60px;
+    }
+}
+
+@media (min-width:1090px) and (max-width:1439px) {
+
+    .Animation-Header,
+    .Animation-Header::before {
+        font-size: 88px;
+        width: 100%;
+        left: 0;
     }
 }
 
 @media (min-width:1440px) {
 
 
-    .Animation-Header::before{
+    .Animation-Header::before {
         font-size: 92px;
         width: 60%;
         left: 20%;
     }
-        .group.Animation-Header::before{
-            width: 100%;
-            left: 0;
-        }
+
+    .group.Animation-Header::before {
+        width: 100%;
+        left: 0;
+    }
 }
 
 /* Cursor Customization */

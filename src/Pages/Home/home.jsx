@@ -29,7 +29,7 @@ const Home = () => {
             />
           </video>
         </div>
-        <div className="absolute top-[5%] md:top-[10%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center items-center text-center">
+        <div className="absolute top-[5%] md:top-[10%] xl:top-[17%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center items-center text-center">
           <h1
             data-text="WE PROVIDE DIGITAL MARKETING"
             className={` font-bold text-[#F2881F] p-4 Animation-Header ${

@@ -74,11 +74,15 @@
 @media (min-width:1440px) {
 
 
-    .Animation-Header::before {
+    .Animation-Header::before{
         font-size: 92px;
         width: 60%;
         left: 20%;
     }
+        .group.Animation-Header::before{
+            width: 100%;
+            left: 0;
+        }
 }
 
 /* Cursor Customization */

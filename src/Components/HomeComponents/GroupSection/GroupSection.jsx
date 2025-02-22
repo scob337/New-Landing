@@ -41,7 +41,7 @@ const GroupSection = () => {
           <div className=" w-full  ">
             <h1
               data-text="Be Group"
-              className={` font-bold text-start text-[#F2881F] py-4 Animation-Header ${
+              className={` font-bold text-start text-[#F2881F] py-4 Animation-Header group ${
                 scrollDirection === "down"
                   ? "scrolling-down"
                   : scrollDirection === "up"

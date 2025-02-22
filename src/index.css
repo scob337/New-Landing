@@ -71,6 +71,16 @@
     }
 }
 
+@media (min-width:1440px) {
+
+
+    .Animation-Header::before {
+        font-size: 92px;
+        width: 60%;
+        left: 20%;
+    }
+}
+
 /* Cursor Customization */
 body {
     cursor: url('./assets/cursor-1.cur'), auto;

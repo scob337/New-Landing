@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="home h-[100vh]  bg-amber-300 z-10 mt-[-120px] ">
+      <div className="home md:h-[120vh] h-[80vh]  bg-amber-300 z-10 mt-[-120px] ">
         <div
           className="w-full h-full relative
        before:absolute before:content-[''] before:w-full
@@ -29,7 +29,7 @@ const Home = () => {
             />
           </video>
         </div>
-        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center items-center text-center">
+        <div className="absolute top-[5%] md:top-[10%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center items-center text-center">
           <h1
             data-text="WE PROVIDE DIGITAL MARKETING"
             className={` font-bold text-[#F2881F] p-4 Animation-Header ${

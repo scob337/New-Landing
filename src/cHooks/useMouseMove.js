@@ -1,4 +1,3 @@
-// useMouseMove.js
 import { useState, useEffect } from "react";
 
 const useMouseMove = () => {
@@ -12,10 +11,7 @@ const useMouseMove = () => {
     const mouseX = e.clientX - elementRect.left;
     const mouseY = e.clientY - elementRect.top;
 
-    const boundedX = Math.max(0, Math.min(mouseX, elementRect.width - 50));
-    const boundedY = Math.max(0, Math.min(mouseY, elementRect.height - 50));
-
-    setPosition({ x: boundedX, y: boundedY });
+    setPosition({ x: mouseX, y: mouseY });
   };
 
   const handleMouseLeave = (ref) => {

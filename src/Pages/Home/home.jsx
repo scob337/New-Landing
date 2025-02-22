@@ -1,10 +1,12 @@
 import useScrollDirection from "../../cHooks/useScroll";
 import GroupSection from "../../Components/HomeComponents/GroupSection/GroupSection";
+import Partners from "../../Components/HomeComponents/Partners/Partners";
+import Services from "../../Components/HomeComponents/Services/Services";
 import Button from "../../Components/SharedComponents/Button";
 import { FaArrowRight } from "react-icons/fa";
 
 const Home = () => {
-  const scrollDirection = useScrollDirection(200);
+  const scrollDirection = useScrollDirection(100);
 
   return (
     <>
@@ -27,7 +29,7 @@ const Home = () => {
             />
           </video>
         </div>
-        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center items-center text-center">
+        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center items-center text-center">
           <h1
             data-text="WE PROVIDE DIGITAL MARKETING"
             className={` font-bold text-[#F2881F] p-4 Animation-Header ${
@@ -52,6 +54,8 @@ const Home = () => {
         </div>
       </div>
       <GroupSection />
+      <Partners />
+      <Services />
     </>
   );
 };

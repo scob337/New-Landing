@@ -73,14 +73,14 @@
 
 /* Cursor Customization */
 body {
-    cursor: url('/cursor-1.cur'), auto;
+    cursor: url('./assets/cursor-1.cur'), auto;
     background-color: #16161B;
 }
 
 a,
 button,
 .logo {
-    cursor: url('/Cursor_5.ico'), auto !important;
+    cursor: url('./assets/Cursor_5.ico'), auto !important;
 }
 
 .custom-cursor {
@@ -154,7 +154,8 @@ button,
 .box-Effect::after {
     transform: rotate(-3deg);
 }
- /* Box-Effect */
+
+/* Box-Effect */
 /* Buttons Effect Border */
 .btn-Effect::before,
 .btn-Effect::after {
